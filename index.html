@@ -1,10 +1,654 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title></title>
+	<meta charset="UTF-8">
+	<title>Vishnu Rajoira</title>
+
+	<style>
+	html
+	{
+		height:100%;
+		overflow: hidden;
+		
+	}
+		body
+		{
+
+		background:#000;
+		
+		font-family: 'bookman';
+
+		}
+
+
+.purple_background
+{
+	background: #202206; /* Old browsers */
+		background: -moz-linear-gradient(top, #202206 0%, #a190cc 0%, #41395b 99%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top, #202206 0%,#a190cc 0%,#41395b 99%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom, #202206 0%,#a190cc 0%,#41395b 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#202206', endColorstr='#41395b',GradientType=0 ); /* IE6-9 */
+
+}
+		#page
+		{
+			width:100%;
+			
+			color:#fff;
+			position: absolute;
+			text-align: center;
+			z-index:9999;
+		}
+		button
+		{
+			z-index: 9999;
+		}
+		.full-page-transparent-image
+		{
+			background: url('./assets/images/background.jpg');
+			position: absolute;
+			width:100%;
+			height: 100%;
+			background-size: cover;
+			opacity: 0.1;
+			
+			z-index: 0;
+		}
+
+		.full-page-texture
+		{
+			background: url('./assets/images/texture.png');
+			position:absolute;
+			width:100%;
+			height:100%;
+			
+			z-index: 1;
+			opacity: 0.1;
+		}
+
+	
+
+
+		
+
+.home_intro span
+{
+ display: block;
+ font-family: 'havalitca';
+ margin: 0px;
+
+}
+
+#button_bottom_area
+{
+
+	position: absolute;
+	bottom: 0px;
+	text-align: center;
+	width:100%;
+	z-index: 9999;
+	height: auto;
+	min-height: 60px;
+
+}
+
+#smoke_screen
+{
+	position: absolute;
+	display: none;
+	overflow-y: hidden;
+	width:100%;
+	height: 100%
+	
+	
+}
+#smoke_screen img
+{
+
+	width:100%;
+	height: 100%;
+	overflow:hidden;
+	z-index: -1;
+
+}
+
+
+
+#more_about_me
+{
+	width: 100%;
+	position: absolute;
+	z-index: 9999;
+	padding:50px;
+	display: none;
+	
+	text-align: left;
+
+}
+
+
+#more_about_me button
+{
+	display: inline-block;
+	margin-bottom: 3px;
+	opacity: 0.9;
+	z-index: 9999;
+
+
+
+	
+}
+
+img#sitting_pose
+{
+	position: relative;
+	width:200px;
+	margin-bottom: -75px;
+	float:right;
+}
+
+.hide_it
+{
+	display: none;
+}
+
+
+#button_bottom_area button
+{
+	
+	opacity: 0.5;
+	padding: 0px;
+	border: none;
+
+	
+}
+
+#More_about_me
+{
+	
+	size: auto;
+	padding:0px 30px;
+	
+
+}
+
+
+#More_about_me_btn
+{
+	background:red;
+	color:#fff;
+}
+#Go_to_home,#Contact_me
+{
+	background:#0066cc;
+	padding:0px 30px;
+	color:#fff;
+
+}
+
+.active_button
+{
+	color:#fff;
+	background: #000;
+}
+
+.active_intro
+{
+	position:absolute;
+	color:#fff;
+	width:80%;
+	text-align:left;
+}
+
+.red_and_black
+{
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8499c9+0,870475+50,ff2d34+51,af3135+100 */
+	background: #8499c9; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #8499c9 0%, #870475 50%, #ff2d34 51%, #af3135 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, #8499c9 0%,#870475 50%,#ff2d34 51%,#af3135 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, #8499c9 0%,#870475 50%,#ff2d34 51%,#af3135 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8499c9', endColorstr='#af3135',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.blue_overlay
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background:#0039e6;
+	opacity: 0.2;
+	display: none;
+}
+
+.green_overlay
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background:green;
+	opacity: 0.2;
+	display: none;
+}
+
+
+.gray_overlay
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background:gray;
+	opacity: 0.2;
+	display: none;
+}
+
+.blue_mix_overlay
+{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+
+	opacity: 0.2;
+	display: none;
+
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d88a6e+0,07daf2+92 */
+	background: #d88a6e; /* Old browsers */
+	background: -moz-linear-gradient(left, #d88a6e 0%, #07daf2 92%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #d88a6e 0%,#07daf2 92%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #d88a6e 0%,#07daf2 92%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d88a6e', endColorstr='#07daf2',GradientType=1 ); /* IE6-9 */
+}
+
+.intro_text
+{
+	color:#fff;
+	font-family: 'arial';
+	background: #000;
+	opacity: 0.5;
+	padding: 30px;
+	text-align: center;
+	font-family: 'Patrick Hand SC', cursive;
+}
+
+
+.intro_text ul
+{
+	font-size:16px;
+	width:200px;
+	display: inline-block;
+}
+
+#contact_me
+{
+	position: absolute;
+	background: #000;
+	color:#fff;
+	opacity: 0.8;
+	width:100%;
+	text-align:center;
+	padding: 10px 0px;
+	z-index: 9999;
+
+}
+
+#button_bottom_area
+{
+	background: #000;
+	overflow:hidden;
+}
+
+#btn-area
+{
+	margin-top: 50px;
+}
+
+
+
+
+	</style>
+	<link href="https://fonts.googleapis.com/css?family=Patrick+Hand+SC" rel="stylesheet">
+	<link rel="stylesheet" href="./assets/griddd-master/dist/griddd.min.css">
 </head>
-<body>
-<h2>Vishnu Rajoria</h2>
-<h3>Coming soon...</h3>
+<body class="purple_background">
+<div class="full-page-transparent-image"></div>
+<div class="full-page-texture"></div>
+
+<div id="page">
+
+	
+	<div class="home_intro">
+	<span id="hi" style="margin-top: 50px;">Hi,</span> <span id="developer_name" style="font-family: 'arial';">I'm Vishnu Rajoria</span><br> 
+
+	<span id="how_are_you"> How Are You! </span><br>
+
+	</div>
+
+</div>
+<!-- 
+<div id="page2">
+
+	
+	<div class="home_intro">
+	<span id="hi">So,</span> <span id="developer_name" style="font-family: 'arial';">Do you like it!</span><br> 
+
+	<span id="how_are_you"> Let me Know </span><br>
+
+	</div>
+
+</div> -->
+
+<div id="smoke_screen">
+	<img src="./assets/images/smoke-reduced-color.gif" alt="">
+</div>
+
+<div class="blue_mix_overlay"></div>
+<div class="green_overlay"></div>
+<div class="blue_overlay"></div>
+<div class="gray_overlay"></div>
+ <div id="button_bottom_area" >
+	<!-- <img id="sitting_pose" src="./assets/images/sitting.png" alt=""> -->
+
+ <button id="More_about_me_btn"><div id="More_about_me">More about me!</div></button>
+ 
+ <button id="Go_to_home_btn" style="display:none; float:left; position: relative;" class="hide_it"><div id="Go_to_home">Back</div></button>
+ <button id="Contact_me_btn" style="display:none; float:right; position: relative;"><div id="Contact_me">Contact Me</div></button>
+ </div>
+
+ <div id="more_about_me"> 
+
+<div id="btn-area">
+<div id="Who_i_am_text" style="display: none;">
+I'm still searching! 
+</div>
+<!-- <button id="Who_i_am">Who i am!</button> -->
+
+
+
+<div id="What_i_do_text" class="intro_text" style="display: none; ">
+I'm a Full Stack Web-Developer. I develop websites and web applications for data management and love to EXPLORE for refreshment. The only thing that keep me going is that i don't like boring things.   
+</div>
+<button  id="What_i_do">What i do!</button>
+
+
+
+<div id="How_i_can_help_text" class="intro_text" style="display: none; text-align: left;">
+	So now you know that i'm a full stack developer. Here are some technologies and platforms i'm using for my management & development purpose.<br> 
+	<ul>
+		<li>PHP & Laravel mostly</li>
+		<li>Javascript</li>
+		<li>Jquery</li>
+		<li>Mysql</li>
+		<li>Apache</li>
+		
+	</ul>
+
+	<ul>
+		<li>Bootstrap</li>
+		<li>Gimp</li>
+		<li>Blender</li>
+		<li>GIT</li>
+		<li>Trello</li>
+	</ul>
+
+	<div style="font-size: 0.5em;  padding:3px 10px; background: #111; border-radius: 50px; text-align: center;">If you have anything to discuss about your requirement you can contact me.</div>
+
+</div>
+<button  id="How_i_can_help">How i can help!</button>
+</div>
+
+ </div>
+
+
+ <div id="contact_me">
+ 	<span style="float:right; padding-right:30px; line-height: 30px;">
+ 	vishnu27990[at]gmail.com
+ 	</span>
+ 	<img  style="float:right; line-height: 20px;" src="./assets/images/email.png" alt="">
+
+ </div>
+
+
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+
+<script src="./assets/js/jquery.fittext.js"></script>
+
+<script>
+	
+	$(function(){
+
+		$('#hi').fitText(0.9);
+		$('#developer_name').fitText(1.8);
+		$('#how_are_you').fitText(1.5);
+		$('#special_skill_name').fitText(1.3);
+		$('#More_about_me').fitText(0.2);
+
+		
+		
+	});
+
+</script>
+	
+<script src="./greensock-js/src/minified/jquery.gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/mojs/0.265.6/mo.min.js"></script>
+<script src="https://cdn.jsdelivr.net/mojs-player/0.43.16/mojs-player.min.js"></script>
+
+<script>
+
+
+$(function(){
+
+
+// Basic settings for apllication goes here as all the setting will be called when the page will be loaded fully with content
+	
+
+	$('#Go_to_home_btn').on('click',function(){
+
+	$('.full-page-transparent-image').css('background','#000');
+	
+	$('#smoke_screen').css('-moz-transform','scaleX(-1)');
+	$('#smoke_screen').css('-o-transform','scaleX(-1)');
+	$('#smoke_screen').css('-webkit-transform','scaleX(-1)');
+	$('#smoke_screen').css('transform','scaleX(-1)');
+	$('#smoke_screen').css('filter','FlipH');
+	$('#smoke_screen').css('-ms-filter','"FlipH"');
+
+
+
+	$('#smoke_screen').fadeIn().delay(400).fadeOut();
+
+	$('#more_about_me').hide();
+	
+	
+	$('.full-page-transparent-image').css('opacity','0.1');
+    $('.full-page-texture').css('opacity','0.1');
+
+
+	$('body').addClass('purple_background');
+
+	
+
+	$('#Go_to_home').fadeOut(500);
+	$('#Contact_me').fadeOut(500);
+
+	
+	$('#More_about_me').show().css('opacity','1');
+	
+	$('button_bottom_area').css('text-align','center');
+
+	$('#page').fadeIn(3000);
+	$('#More_about_me_btn').hide();
+
+	$('#More_about_me_btn').delay(1000).fadeIn(1000).css('opacity','0.5');
+	// $('.full-page-transparent-image').css('background',"url('./assets/images/background.jpg')").css('background-size','cover');
+
+
+});
+
+$('#More_about_me_btn').on('click',function(){
+
+		$('button').removeAttr("disabled");
+
+	$('#Who_i_am').css('font-size','10px').fitText(0.1);
+	$('#What_i_do').css('font-size','9px').fitText(0.1);
+	$('#How_i_can_help').css('font-size','9px').fitText(0.1);
+
+	$('#smoke_screen').css('-moz-transform','scaleX(1)');
+	$('#smoke_screen').css('-o-transform','scaleX(1)');
+	$('#smoke_screen').css('-webkit-transform','scaleX(1)');
+	$('#smoke_screen').css('transform','scaleX(1)');
+	$('#smoke_screen').css('filter','FlipH');
+	$('#smoke_screen').css('-ms-filter','"FlipH"');
+
+
+
+	$('#page').hide();
+	$(this).hide();
+	$('#smoke_screen').fadeIn().delay(400).fadeOut();
+	$('.full-page-transparent-image').css('background',"url('./assets/images/nature.jpg')").css('background-size','cover');
+
+	$(this)
+                    .animate(
+                        {
+                          
+                            'opacity':'0',
+                            // to move it towards the right and, probably, off-screen.
+                        },400,
+                        function(){
+							$('#Who_i_am_text').hide();
+							$('#What_i_do_text').hide();
+							$('#How_i_can_help_text').hide();
+
+                        	
+                           	$('body').removeClass('purple_background');
+                           	$('#more_about_me').fadeIn(1000);
+                           	$('.full-page-transparent-image').css('opacity','0.4');
+                           	$('.full-page-texture').css('opacity','0.7');
+							
+							$('#Who_i_am').removeClass('active_button');
+							$('#What_i_do').removeClass('active_button');
+							$('#How_i_can_help').removeClass('active_button');
+
+
+							$('#Who_i_am_text').removeClass('active_intro');
+							$('#What_i_do_text').removeClass('active_intro');
+							$('#How_i_can_help_text').removeClass('active_intro');
+
+							
+
+							$('#Who_i_am').fadeIn(1000);
+							$('#What_i_do').fadeIn(1000);
+							$('#How_i_can_help').fadeIn(1000);
+
+                           	$('#Who_i_am').fitText(0.1);
+							$('#What_i_do').fitText(0.1);
+							$('#How_i_can_help').fitText(0.145);
+							$('#More_about_me').hide();
+
+							$('#button_bottom_area button').hide();
+							$('#button_bottom_area button').fadeIn(1000);
+							$('#button_bottom_area').css('width','100%').css('left','0px');
+							$('#Go_to_home').parent().css('position','absolute').css('bottom','0px').css('left','0px');
+
+							$('#Go_to_home').show();
+							// $('#Contact_me').show();
+
+							$('#Contact_me').hide();
+
+
+							$('#Go_to_home').css('font-size','10px').fitText(0.04);
+							$('#Contact_me').css('font-size','10px').fitText(0.1);
+
+							
+
+
+
+                        });
+
+});
+
+
+$('#Who_i_am').on('click',function(){
+
+$('.full-page-transparent-image').hide();
+	 $('#What_i_do').removeClass('active_button');
+	 $('#How_i_can_help').removeClass('active_button');
+
+	$(this).addClass('active_button');
+	$('.full-page-texture').css('opacity','0.3');
+
+
+	$('.full-page-transparent-image').css('background',"url('./assets/images/universe.jpg')").css('background-size','cover').fadeIn(1000);
+
+	$('.blue_mix_overlay').fadeIn().delay(400).fadeOut();
+
+	$('#smoke_screen').fadeIn().delay(400).fadeOut();
+
+	$('#What_i_do_text').removeClass('active_intro').hide();
+	$('#How_i_can_help_text').removeClass('active_intro').hide();
+
+
+	$('#Who_i_am_text').addClass('active_intro').fadeIn(1000);
+	$('#Who_i_am_text').css('font-size','1px').fitText(3).css('margin-top','165px');
+});
+
+$('#What_i_do').on('click',function(){
+
+$(this).attr("disabled","disabled");
+$('#How_i_can_help').removeAttr("disabled");
+
+
+$('.full-page-transparent-image').hide();
+	$('#Who_i_am').removeClass('active_button');
+	$('#How_i_can_help').removeClass('active_button');
+
+	$(this).addClass('active_button');
+	$('.full-page-texture').css('opacity','0.3');
+
+
+
+	$('.gray_overlay').fadeIn().delay(400).fadeOut();
+	$('#smoke_screen').fadeIn().delay(400).fadeOut();
+
+
+	$('#How_i_can_help_text').removeClass('active_intro').hide();
+	$('#Who_i_am_text').removeClass('active_intro').hide();
+
+	$('#What_i_do_text').addClass('active_intro').fadeIn(500);
+	$('#What_i_do_text').css('font-size','1px').css('margin-top','100px').fitText(3);
+
+	$('.full-page-transparent-image').css('background',"url('./assets/images/science.jpg')").css('background-size','cover').fadeIn(1000);
+
+});
+
+
+
+$('#How_i_can_help').on('click',function(){
+	$(this).attr("disabled","disabled");
+	$('#What_i_do').removeAttr("disabled");
+	$('.full-page-transparent-image').hide();
+	$('#Who_i_am').removeClass('active_button');
+	$('#What_i_do').removeClass('active_button');
+
+	$(this).addClass('active_button');
+	$('.full-page-texture').css('opacity','0.3');
+
+
+
+	$('.blue_overlay').fadeIn().delay(400).fadeOut();
+	$('#smoke_screen').fadeIn().delay(400).fadeOut();
+
+	$('#Who_i_am_text').removeClass('active_intro').hide();
+	$('#What_i_do_text').removeClass('active_intro').hide();	
+
+	$('.full-page-transparent-image').css('background',"url('./assets/images/help.jpg')").css('background-size','cover').fadeIn(1000);
+
+	$('#How_i_can_help_text').addClass('active_intro').fadeIn(1000);
+	$('#How_i_can_help_text').css('font-size','1px').css('margin-top','35px').fitText(3);
+});
+
+
+});
+
+
+</script>
 </body>
 </html>
